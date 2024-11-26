@@ -46,7 +46,7 @@ class BankAPI:
     account["balances"][account_type] -= amount
     return True
 
-  def register_account(self, card_number: str, pin: str, checking_balance: int, savings_balance: int):
+  def register_account(self, card_number: str, pin: str, checking_balance: int, savings_balance: int) -> bool:
     if card_number in self.accounts:
       raise InvalidAccountError("Account with this card number already exists.")
     

@@ -115,7 +115,7 @@ class TestATMController(unittest.TestCase):
   def test_invalid_withdraw_after_account_selection(self):
     self._insert_and_authenticate("654321", "1999")
     self.atm_controller.select_account("Checking")
-    self.assertFalse(self.atm_controller.withdraw(150))  # Insufficient funds (only 100 available)
+    self.assertFalse(self.atm_controller.withdraw(150))
 
 if __name__ == "__main__":
   unittest.main()
